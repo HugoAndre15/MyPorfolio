@@ -97,5 +97,144 @@ html body section.home .home-content .change-text h3 .word .letter.in {
 html body section.home .home-content .change-text h3 .word .letter.behind {
   transform: rotateX(-90deg);
 }
+html body section.home .home-content p {
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+html body section.home .home-content .info-box {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin: 1rem 0 2rem;
+}
+html body section.home .home-content .info-box div {
+  width: 250px;
+}
+html body section.home .home-content .info-box h5 {
+  font-weight: 700;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+html body section.home .home-content .info-box span {
+  font-size: 0.9rem;
+  color: #bdbdbd;
+}
+html body section.home .home-content .btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 45px;
+}
+html body section.home .home-content .btn-box a.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #12f7ff;
+  color: #250821;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.6s;
+  box-shadow: 0 0 0.5rem #12f7ff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: solid 2px #12f7ff;
+}
+html body section.home .home-content .btn-box a.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #250821;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.4s;
+}
+html body section.home .home-content .btn-box a.btn:hover {
+  color: #12f7ff;
+}
+html body section.home .home-content .btn-box a.btn:hover::before {
+  width: 100%;
+}
+html body section.home .home-content .btn-box a.btn:nth-child(2) {
+  background: #250821;
+  color: #12f7ff;
+}
+html body section.home .home-content .btn-box a.btn:nth-child(2)::before {
+  background: #12f7ff;
+}
+html body section.home .home-content .btn-box a.btn:nth-child(2):hover {
+  color: #250821;
+}
+html body section.home .home-content .social-icons {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  height: 40px;
+}
+html body section.home .home-content .social-icons a {
+  display: inline-flex;
+  width: 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #250821;
+  color: #12f7ff;
+  border: 2px solid #12f7ff;
+  transition: 0.6;
+  box-shadow: 0 0 0.3rem #12f7ff;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+html body section.home .home-content .social-icons a i {
+  font-size: 1.5rem;
+}
+html body section.home .home-content .social-icons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #12f7ff;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.6s;
+}
+html body section.home .home-content .social-icons a:hover {
+  color: #250821;
+}
+html body section.home .home-content .social-icons a:hover::before {
+  width: 100%;
+}
+html body section.home .home-image {
+  position: relative;
+}
+html body section.home .home-image .img-box {
+  text-align: center;
+}
+html body section.home .home-image .img-box img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+html body section.home .home-image .liquid-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 20%;
+}
+html body section.home .home-image .liquid-shape:nth-child(2) {
+  filter: blur(50px);
+}
 
 /*# sourceMappingURL=style.css.map */
