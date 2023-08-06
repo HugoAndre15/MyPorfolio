@@ -1,0 +1,13 @@
+html{
+    body{
+        .container {
+            & h1 {
+              color: lightcoral;
+            }
+            &__text {
+              color: blue;
+            }
+          }
+          
+    }
+}
