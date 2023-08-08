@@ -12,6 +12,53 @@ span {
   color: #12f7ff;
 }
 
+a.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #12f7ff;
+  color: #250821;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.6s;
+  box-shadow: 0 0 0.5rem #12f7ff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: solid 2px #12f7ff;
+}
+a.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #250821;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.4s;
+}
+a.btn:hover {
+  color: #12f7ff;
+}
+a.btn:hover::before {
+  width: 100%;
+}
+a.btn:nth-child(2) {
+  background: #250821;
+  color: #12f7ff;
+}
+a.btn:nth-child(2)::before {
+  background: #12f7ff;
+}
+a.btn:nth-child(2):hover {
+  color: #250821;
+}
+
 html body {
   font-family: "Poppins", sans-serif;
   background-color: #250821;
@@ -53,6 +100,8 @@ html body header #menu-icon {
 }
 html body section {
   padding: 100px 10%;
+  /* Home ------------------------------------------------*/
+  /*A propos ------------------------------------------------*/
 }
 html body section.home {
   min-height: 100vh;
@@ -126,52 +175,6 @@ html body section.home .home-content .btn-box {
   width: 400px;
   height: 45px;
 }
-html body section.home .home-content .btn-box a.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 100%;
-  background: #12f7ff;
-  color: #250821;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  font-weight: 600;
-  transition: 0.6s;
-  box-shadow: 0 0 0.5rem #12f7ff;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  border: solid 2px #12f7ff;
-}
-html body section.home .home-content .btn-box a.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #250821;
-  width: 0;
-  height: 100%;
-  z-index: -1;
-  transition: 0.4s;
-}
-html body section.home .home-content .btn-box a.btn:hover {
-  color: #12f7ff;
-}
-html body section.home .home-content .btn-box a.btn:hover::before {
-  width: 100%;
-}
-html body section.home .home-content .btn-box a.btn:nth-child(2) {
-  background: #250821;
-  color: #12f7ff;
-}
-html body section.home .home-content .btn-box a.btn:nth-child(2)::before {
-  background: #12f7ff;
-}
-html body section.home .home-content .btn-box a.btn:nth-child(2):hover {
-  color: #250821;
-}
 html body section.home .home-content .social-icons {
   margin-top: 8rem;
   display: flex;
@@ -235,6 +238,93 @@ html body section.home .home-image .liquid-shape {
 }
 html body section.home .home-image .liquid-shape:nth-child(2) {
   filter: blur(50px);
+}
+html body section.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2em;
+  background: #292e33;
+}
+html body section.about .img-about {
+  text-align: center;
+  position: relative;
+}
+html body section.about .img-about img {
+  max-width: 400px;
+  height: auto;
+}
+html body section.about .img-about .info-about1, html body section.about .img-about .info-about2, html body section.about .img-about .info-about3 {
+  background: #250821;
+  font-size: 0.7rem;
+  position: absolute;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 69% 31% 66% 34%/21% 30% 70% 79%;
+  display: block;
+  box-shadow: 0 0 0.5rem #12f7ff;
+  border: 1px solid #12f7ff;
+  outline: 2px solid #250821;
+  z-index: 100;
+  animation: morph 6s linear infinite;
+}
+html body section.about .img-about .info-about1 {
+  left: 5%;
+  top: 50%;
+}
+html body section.about .img-about .info-about2 {
+  left: 66%;
+  top: 25%;
+}
+html body section.about .img-about .info-about3 {
+  left: 61%;
+  top: 70%;
+}
+html body section.about .img-about span {
+  color: #12f7ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+html body section.about .about-content span {
+  color: #fdfdfd;
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+html body section.about .about-content h2 {
+  color: #12f7ff;
+  font-weight: 700;
+  font-size: 2rem;
+}
+html body section.about .about-content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+html body section.about .about-content p {
+  color: #fdfdfd;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+html body section.about .about-content .btn {
+  padding: 10px;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30%/40% 40% 60% 50%;
+  }
+  30% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 70%;
+  }
+  60% {
+    border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
+  }
+  80% {
+    border-radius: 69% 31% 66% 34%/21% 30% 70% 79%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
